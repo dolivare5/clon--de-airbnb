@@ -2,15 +2,23 @@
 @use "../../base/mixins" as m;
 
 .informacion{
-    padding: 15rem 6rem;
+    padding: 8rem 3rem;
     background-color: #FF385C;
     border-radius: 1.5rem;
-    margin: 8rem auto 0 auto;
+    @include m.tablet{
+        padding: 18rem 6rem;
+        margin-top: 8rem;
+    }
 
     &__texto{
-        font-size: 4.5rem;
-        font-weight: 700;
+        margin: 0 0 2rem 0;
         color: v.$blanco;
+        font-size: 2.5rem;
+        line-height: 1.2;
+        @include m.tablet{
+            font-size: 4.5rem;
+            font-weight: 700;
+        }
     }
     &__enlace{
         padding: 1rem 3rem;

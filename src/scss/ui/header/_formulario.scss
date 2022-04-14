@@ -2,6 +2,7 @@
 @use "../../base/mixins" as m;
 
 .formulario{
+    display: none;
     background-color: v.$blanco;
     margin: 5.4rem auto 2rem  auto;
     border-radius: 5rem;

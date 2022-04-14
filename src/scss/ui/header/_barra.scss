@@ -3,12 +3,19 @@
 
 .barra{
     overflow: hidden;
+    width: 85%;
+    margin: 0 auto 1rem auto;
+    @include m.tablet{
+        width: unset;
+    }
     &__contenedor{
         @include m.tablet{
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 2rem 0;
+            max-width: 85%;
+            margin: 0 auto;
         }
     }
 
@@ -22,11 +29,19 @@
         right: 0;
         z-index: 100;
         transition: 0.3s ease all;
+        width: 100%;
+        padding: 1rem;
+        @include m.tablet{
+            padding: unset;
+        }
     }
 
     &__navegacion {
-        display: flex;
-        gap: 4rem;
+        display: none;
+        @include m.tablet{
+            display: flex;
+            gap: 4rem;
+        }
     }
 
     &__link{
@@ -35,18 +50,29 @@
     }
 
     &__logo{
-        height: 5rem;
-        width: 20rem;
-        background-image: url("../img/airbnb_logo.svg");
-        background-repeat: no-repeat;
-        &:hover{
-            background-image: url("../img/airbnb_logo_blanco.svg");
-            cursor: pointer;
+        display: none;
+        @include m.tablet{
+            display: flex;
+            height: 5rem;
+            width: 20rem;
+            background-image: url("../img/airbnb_logo.svg");
+            background-repeat: no-repeat;
+            &:hover{
+                background-image: url("../img/airbnb_logo_blanco.svg");
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__login{
+        display: none;
+        @include m.tablet{
+            display: flex;
         }
     }
 
     &--modificar{
-        width: 80%;
+        width: 85%;
         margin: 0 auto;
         overflow: visible;
         .barra__navegacion{
@@ -70,27 +96,41 @@
     }
 
     &__busqueda{
-        display: none;
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
         align-items: center;
         border-radius: 15rem;
-        background-color: #FFFFFF;
-        box-shadow: 0 6px 20px rgb(0 0 0 /40%);
+        background-color: #f7f7f7;
+        padding: 1.1rem;
+        @include m.tablet{
+            display: none;
+            justify-content: unset;
+            margin-top: 0;
+            flex-direction: unset;
+            padding: 0;
+            box-shadow: 0 6px 20px rgb(0 0 0 /40%);
+        }
     }
 
     &__campo-busqueda{
         border: none;
-        margin: 1.4rem;
         outline: none;
+        width: 14rem;
         background-color: transparent;
+        color: black;
+        @include m.tablet{
+            margin: 1.4rem;
+            width: auto;
+        }
     }
 
     &__icono-busqueda{
-        padding: 1.6rem;
-        margin-right: .7rem;
-        background-color: #FF385C;
         border-radius: 50%;
         width: 3rem;
         height: 3rem;
+        margin-right: .3rem;
         svg{
             position: relative;
             left: 50%;
@@ -98,6 +138,15 @@
             -webkit-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
             transform: translate(-50%, -50%);
+            stroke: #FF385C !important;
+        }
+        @include m.tablet{
+            margin-right: .7rem;
+            padding: 1.6rem;
+            background-color: #FF385C;
+            svg{
+                stroke: v.$blanco !important;
+            }
         }
     }
 }

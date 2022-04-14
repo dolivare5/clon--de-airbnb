@@ -7,6 +7,18 @@
     }
 }
 
+@mixin telefono-gama-media {
+    @media (min-width: 360px) and (min-height: 700px){
+        @content;
+    }
+}
+
+@mixin telefono-gama-alta {
+    @media (min-width: 385px) and (min-height: 800px) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media (min-width: v.$tablet) {
         @content;

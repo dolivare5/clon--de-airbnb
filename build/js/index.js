@@ -15,3 +15,13 @@ window.onscroll = function () {
        barra.classList.add('contenedor');
    }
 }
+
+const ancho = window.innerWidth;
+const altura = window.innerHeight;
+
+if (ancho <=480){
+    const barra_busqueda = document.querySelector('.barra__campo-busqueda');
+    barra_busqueda.placeholder = '¿A donde vas?';
+}
+
+console.log(`${ancho} x ${altura}`)

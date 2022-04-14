@@ -3,13 +3,28 @@
 
 .header{
     background: #000;
-    height: 130vh;
+    height: 100vh;
     text-align: center;
+
+    @include m.telefono-gama-media{
+        height: 86vh;
+    }
+
+    @include m.tablet{
+        height: 130vh;
+    }
     &__busqueda{
         margin-top: 5rem;
     }
 
     .header__busqueda-boton{
         @include m.boton(v.$blanco, v.$primario);
+    }
+
+    &__contenido{
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
     }
 }

@@ -401,8 +401,18 @@ a {
 
 .header {
   background: #000;
-  height: 130vh;
+  height: 100vh;
   text-align: center;
+}
+@media (min-width: 360px) and (min-height: 700px) {
+  .header {
+    height: 86vh;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    height: 130vh;
+  }
 }
 .header__busqueda {
   margin-top: 5rem;
@@ -422,9 +432,22 @@ a {
     display: inline-block;
   }
 }
+.header__contenido {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 
 .barra {
   overflow: hidden;
+  width: 85%;
+  margin: 0 auto 1rem auto;
+}
+@media (min-width: 768px) {
+  .barra {
+    width: unset;
+  }
 }
 @media (min-width: 768px) {
   .barra__contenedor {
@@ -432,6 +455,8 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0;
+    max-width: 85%;
+    margin: 0 auto;
   }
 }
 .barra--fijar {
@@ -446,27 +471,53 @@ a {
   right: 0;
   z-index: 100;
   transition: 0.3s ease all;
+  width: 100%;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .barra--fijar {
+    padding: unset;
+  }
 }
 .barra__navegacion {
-  display: flex;
-  gap: 4rem;
+  display: none;
+}
+@media (min-width: 768px) {
+  .barra__navegacion {
+    display: flex;
+    gap: 4rem;
+  }
 }
 .barra__link {
   color: #FFFFFF;
   margin: 0;
 }
 .barra__logo {
-  height: 5rem;
-  width: 20rem;
-  background-image: url("../img/airbnb_logo.svg");
-  background-repeat: no-repeat;
+  display: none;
 }
-.barra__logo:hover {
-  background-image: url("../img/airbnb_logo_blanco.svg");
-  cursor: pointer;
+@media (min-width: 768px) {
+  .barra__logo {
+    display: flex;
+    height: 5rem;
+    width: 20rem;
+    background-image: url("../img/airbnb_logo.svg");
+    background-repeat: no-repeat;
+  }
+  .barra__logo:hover {
+    background-image: url("../img/airbnb_logo_blanco.svg");
+    cursor: pointer;
+  }
+}
+.barra__login {
+  display: none;
+}
+@media (min-width: 768px) {
+  .barra__login {
+    display: flex;
+  }
 }
 .barra--modificar {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   overflow: visible;
 }
@@ -486,25 +537,43 @@ a {
   }
 }
 .barra__busqueda {
-  display: none;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
   align-items: center;
   border-radius: 15rem;
-  background-color: #FFFFFF;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f7f7f7;
+  padding: 1.1rem;
+}
+@media (min-width: 768px) {
+  .barra__busqueda {
+    display: none;
+    justify-content: unset;
+    margin-top: 0;
+    flex-direction: unset;
+    padding: 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
 }
 .barra__campo-busqueda {
   border: none;
-  margin: 1.4rem;
   outline: none;
+  width: 14rem;
   background-color: transparent;
+  color: black;
+}
+@media (min-width: 768px) {
+  .barra__campo-busqueda {
+    margin: 1.4rem;
+    width: auto;
+  }
 }
 .barra__icono-busqueda {
-  padding: 1.6rem;
-  margin-right: 0.7rem;
-  background-color: #FF385C;
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
+  margin-right: 0.3rem;
 }
 .barra__icono-busqueda svg {
   position: relative;
@@ -512,9 +581,21 @@ a {
   top: 50%;
   -webkit-transform: translateX(-50%);
   transform: translate(-50%, -50%);
+  stroke: #FF385C !important;
+}
+@media (min-width: 768px) {
+  .barra__icono-busqueda {
+    margin-right: 0.7rem;
+    padding: 1.6rem;
+    background-color: #FF385C;
+  }
+  .barra__icono-busqueda svg {
+    stroke: #FFFFFF !important;
+  }
 }
 
 .formulario {
+  display: none;
   background-color: #FFFFFF;
   margin: 5.4rem auto 2rem auto;
   border-radius: 5rem;
@@ -571,15 +652,27 @@ a {
 }
 
 .informacion {
-  padding: 15rem 6rem;
+  padding: 8rem 3rem;
   background-color: #FF385C;
   border-radius: 1.5rem;
-  margin: 8rem auto 0 auto;
+}
+@media (min-width: 768px) {
+  .informacion {
+    padding: 18rem 6rem;
+    margin-top: 8rem;
+  }
 }
 .informacion__texto {
-  font-size: 4.5rem;
-  font-weight: 700;
+  margin: 0 0 2rem 0;
   color: #FFFFFF;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .informacion__texto {
+    font-size: 4.5rem;
+    font-weight: 700;
+  }
 }
 .informacion__enlace {
   padding: 1rem 3rem;
@@ -594,9 +687,8 @@ a {
   background-image: url("../img/bosque.webp");
   background-size: cover;
   background-position: center;
-  height: 80rem;
-  width: 80%;
-  margin: -35rem auto 5rem auto;
+  height: 45rem;
+  margin: 5rem 0 5rem 0;
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
@@ -604,29 +696,60 @@ a {
   align-items: center;
   padding-bottom: 11rem;
 }
-.busqueda div {
+@media (min-width: 360px) and (min-height: 700px) {
+  .busqueda {
+    height: 44rem;
+  }
+}
+@media (min-width: 385px) and (min-height: 800px) {
+  .busqueda {
+    height: 62rem;
+  }
+}
+@media (min-width: 768px) {
+  .busqueda {
+    height: 80rem;
+    margin-top: 10rem;
+  }
+}
+.busqueda__contenido {
   position: relative;
 }
-.busqueda div p {
+.busqueda__texto {
+  padding: 0 1rem;
   color: #FFFFFF;
-  font-size: 5rem;
+  font-size: 2.5rem;
   text-align: center;
   font-weight: bold;
 }
-.busqueda div a {
+@media (min-width: 768px) {
+  .busqueda__texto {
+    font-size: 5rem;
+  }
+}
+.busqueda__enlace {
+  width: 64%;
+  margin-top: 3rem;
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
-  padding: 1.7rem 4rem;
+  padding: 1.6rem 0;
   background-color: #FFFFFF;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   border-radius: 15rem;
   align-items: center;
 }
-.busqueda div a span {
+@media (min-width: 768px) {
+  .busqueda__enlace {
+    width: unset;
+    font-size: 2.5rem;
+    padding: 1.7rem 4rem;
+  }
+}
+.busqueda__enlace span {
   background-image: linear-gradient(90deg, #6F019C 0%, #C6017E 135.12%);
   color: transparent;
   -webkit-background-clip: text;
