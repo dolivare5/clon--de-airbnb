@@ -11,6 +11,79 @@
         <link rel="stylesheet" href="build/css/app.css">
     </head>
     <body>
+        <header class="header">
+            <div class="barra">
 
+               <div class="barra__contenedor">
+                   <div class="barra__logo">
+                       <a href="#"></a>
+                   </div> <!-- .barra__logo -->
+
+                   <div class="barra__busqueda">
+                       <input class="barra__campo-busqueda" type="text" placeholder="Empieza la busqueda">
+                       <div class="barra__icono-busqueda">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="16"
+                                height="16" viewBox="0 0 24 24" stroke-width="3" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                               <circle cx="10" cy="10" r="7" />
+                               <line x1="21" y1="21" x2="15" y2="15" />
+                           </svg>
+                       </div> <!-- .barra__icono-busqueda -->
+                   </div> <!-- .barra_busqueda -->
+
+                   <nav class="barra__navegacion">
+                       <a class="barra__link" href="#">Lugares para hospedarte</a>
+                       <a class="barra__link" href="#">Experiencias</a>
+                       <a class="barra__link" href="#">Experiencias en linea</a>
+                   </nav> <!-- .barra__navegacion -->
+
+                   <nav class="barra__login">
+                       <a class="barra__link" href="#">Hazte Anfitrión</a>
+                   </nav> <!-- .barra__login -->
+               </div>
+
+            </div> <!-- .barra .contenedor -->
+
+            <form action="" class="formulario contenedor">
+                <div class="formulario__campo">
+                    <label for="ubicacion" class="formulario__label">Ubicación</label>
+                    <input type="text" class="formulario__input" placeholder="¿A donde viajas?" id="ubicacion">
+                </div> <!-- .formulario__campo -->
+
+                <div class="formulario__campo">
+                    <label for="llegada" class="formulario__label">Llegada</label>
+                    <input type="date" class="formulario__input" id="llegada">
+                </div> <!-- .formulario__campo -->
+
+                <div class="formulario__campo">
+                    <label for="salida" class="formulario__label">Salida</label>
+                    <input type="date" class="formulario__input" id="salida">
+                </div> <!-- .formulario__campo -->
+
+                <div class="formulario__campo">
+                    <label for="huespedes" class="formulario__label">Huéspedes</label>
+                    <input type="number" class="formulario__input" placeholder="¿Cuantos?" id="huespedes">
+                </div> <!-- .formulario__campo -->
+
+                <div class="formulario__campo">
+                    <input type="submit" class="formulario__submit" value="Buscar">
+                </div> <!-- .formulario__campo -->
+            </form> <!-- .formulario -->
+
+            <div class="informacion contenedor">
+                <p class="informacion__texto">Ayuda a albergar a 100 000 refugiados que uyen de Ucrania</p>
+                <a href="#" class="informacion__enlace">Más información</a>
+            </div>
+
+        </header> <!-- .header -->
+
+        <section class="busqueda">
+                <div class="busqueda__contenido">
+                    <p class="header__busqueda-label">Dejate guiar por la curiosidad</p>
+                    <a href="#" class="header__busqueda-boton"><span>Búsqueda Flexible</span></a>
+                </div> <!-- .busqueda__contenido -->
+        </section> <!-- .busqueda -->
+
+        <script src="build/js/index.js"></script>
     </body>
 </html>

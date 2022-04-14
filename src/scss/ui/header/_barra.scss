@@ -1,0 +1,103 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.barra{
+    overflow: hidden;
+    &__contenedor{
+        @include m.tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+        }
+    }
+
+    &--fijar{
+        display: flex;
+        background-color: v.$blanco;
+        height: fit-content;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        transition: 0.3s ease all;
+    }
+
+    &__navegacion {
+        display: flex;
+        gap: 4rem;
+    }
+
+    &__link{
+        color: v.$blanco;
+        margin: 0;
+    }
+
+    &__logo{
+        height: 5rem;
+        width: 20rem;
+        background-image: url("../img/airbnb_logo.svg");
+        background-repeat: no-repeat;
+        &:hover{
+            background-image: url("../img/airbnb_logo_blanco.svg");
+            cursor: pointer;
+        }
+    }
+
+    &--modificar{
+        width: 80%;
+        margin: 0 auto;
+        overflow: visible;
+        .barra__navegacion{
+            display: none;
+        }
+        .barra__busqueda{
+            display: flex;
+        }
+        @include m.desktop{
+            .barra__link{
+                color: v.$negro;
+                margin: 0;
+            }
+
+            .barra__logo{
+                &:hover{
+                    background-image: url("../img/airbnb_logo_oscuro.svg");
+                }
+            }
+        }
+    }
+
+    &__busqueda{
+        display: none;
+        align-items: center;
+        border-radius: 15rem;
+        background-color: #FFFFFF;
+        box-shadow: 0 6px 20px rgb(0 0 0 /40%);
+    }
+
+    &__campo-busqueda{
+        border: none;
+        margin: 1.4rem;
+        outline: none;
+        background-color: transparent;
+    }
+
+    &__icono-busqueda{
+        padding: 1.6rem;
+        margin-right: .7rem;
+        background-color: #FF385C;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        svg{
+            position: relative;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translate(-50%, -50%);
+        }
+    }
+}

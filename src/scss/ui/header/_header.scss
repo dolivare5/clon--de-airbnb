@@ -1,0 +1,15 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.header{
+    background: #000;
+    height: 130vh;
+    text-align: center;
+    &__busqueda{
+        margin-top: 5rem;
+    }
+
+    .header__busqueda-boton{
+        @include m.boton(v.$blanco, v.$primario);
+    }
+}

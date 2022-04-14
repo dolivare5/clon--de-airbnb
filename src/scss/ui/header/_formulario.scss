@@ -1,0 +1,62 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.formulario{
+    background-color: v.$blanco;
+    margin: 5.4rem auto 2rem  auto;
+    border-radius: 5rem;
+    box-shadow: 0 3px 7px 0 v.$gris;
+    padding: 3rem 0;
+    @include m.desktop{
+        display: flex;
+        justify-content: space-between;
+        max-width: 90rem;
+        padding: 0;
+    }
+
+    &__campo{
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+
+        &:nth-child(1){
+            @include m.desktop{
+                padding-left: 4rem;
+            }
+        }
+
+        &:hover{
+            background-color: #F0F0F0;
+            border-radius: 5rem;
+            box-shadow: 0 6px 20px rgb(0 0 0 /40%);
+        }
+    }
+
+    &__label{
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-align: left;
+    }
+
+    &__input{
+        margin-top: .5rem;
+        border: none;
+        width: 100%;
+        color: v.$gris;
+        outline: none;
+        background-color: transparent;
+    }
+
+    &__submit{
+        display: block;
+        height: 4rem;
+        border: none;
+        border-radius: 2rem;
+        background-image: radial-gradient(circle, rgb(255, 56, 92) 0%, v.$secundario 100%);
+        padding: 0 2rem;
+        color: v.$blanco;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+}

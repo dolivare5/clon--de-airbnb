@@ -1,0 +1,25 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.informacion{
+    padding: 15rem 6rem;
+    background-color: #FF385C;
+    border-radius: 1.5rem;
+    margin: 8rem auto 0 auto;
+
+    &__texto{
+        font-size: 4.5rem;
+        font-weight: 700;
+        color: v.$blanco;
+    }
+    &__enlace{
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+        background-color: #FF385C;
+        border: 1px solid v.$blanco;
+        color: v.$blanco;
+        cursor: pointer;
+    }
+
+
+}

@@ -1,0 +1,48 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.busqueda{
+    background-image: url("../img/bosque.webp");
+    background-size: cover;
+    background-position: center;
+    height: 80rem;
+    width: 80%;
+    margin: -35rem auto 5rem auto;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 11rem;
+    div{
+        position: relative;
+        p{
+            color: v.$blanco;
+            font-size: 5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        a{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 1.7rem 4rem;
+            background-color: v.$blanco;
+            font-size: 2.5rem;
+            font-weight: bold;
+            border-radius: 15rem;
+
+            align-items: center;
+            span{
+                background-image: linear-gradient(90deg, #6F019C 0%, #C6017E 135.12%);
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+            }
+        }
+    }
+
+}
+
