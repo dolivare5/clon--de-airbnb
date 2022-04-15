@@ -888,4 +888,75 @@ a {
 .lugar__nombre {
   font-size: 1.8rem;
 }
+
+.lugares-recomendados__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 30rem);
+  -webkit-column-gap: 4rem;
+     -moz-column-gap: 4rem;
+          column-gap: 4rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+.lugares-recomendados__grid > * {
+  scroll-snap-align: center;
+}
+@media (min-width: 1300px) and (min-height: 815px) {
+  .lugares-recomendados__grid {
+    overflow-y: unset;
+    overflow-x: unset;
+    -ms-scroll-snap-type: unset;
+        scroll-snap-type: unset;
+  }
+  .lugares-recomendados__grid > * {
+    scroll-snap-align: unset;
+  }
+}
+@media (min-width: 1300px) and (min-height: 815px) {
+  .lugares-recomendados__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.lugar-recomendado {
+  margin-bottom: 5rem;
+  border-radius: 1.5rem;
+}
+@media (min-width: 1300px) and (min-height: 815px) {
+  .lugar-recomendado {
+    margin-bottom: 0;
+  }
+}
+.lugar-recomendado__img {
+  width: 100%;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.lugar-recomendado__descripcion {
+  padding: 3rem 3rem 12rem;
+}
+.lugar-recomendado__heading {
+  margin-top: 0;
+  color: #FFFFFF;
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+.lugar-recomendado__kilometros {
+  color: #FFFFFF;
+}
+.lugar-recomendado:nth-child(1) {
+  background-color: #d93b30;
+}
+.lugar-recomendado:nth-child(2) {
+  background-color: #bc1a6e;
+}
+.lugar-recomendado:nth-child(3) {
+  background-color: #de3151;
+}
+.lugar-recomendado:nth-child(4) {
+  background-color: #cc2d4a;
+}
 /*# sourceMappingURL=app.css.map */
