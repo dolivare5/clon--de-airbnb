@@ -849,4 +849,43 @@ a {
 .destino__nombre, .destino__distancia {
   margin: 0;
 }
+.lugares__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 25rem);
+  -webkit-column-gap: 4rem;
+     -moz-column-gap: 4rem;
+          column-gap: 4rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+.lugares__grid > * {
+  scroll-snap-align: center;
+}
+@media (min-width: 1300px) and (min-height: 815px) {
+  .lugares__grid {
+    overflow-y: unset;
+    overflow-x: unset;
+    -ms-scroll-snap-type: unset;
+        scroll-snap-type: unset;
+  }
+  .lugares__grid > * {
+    scroll-snap-align: unset;
+  }
+}
+@media (min-width: 1000px) and (min-height: 590px) {
+  .lugares__grid {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.lugar__imagen {
+  border-radius: 1rem;
+}
+.lugar__nombre {
+  font-size: 1.8rem;
+}
 /*# sourceMappingURL=app.css.map */
