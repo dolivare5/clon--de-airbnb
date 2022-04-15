@@ -388,7 +388,12 @@ h1 {
 }
 
 h2 {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
+}
+@media (min-width: 700px) and (min-height: 600px) {
+  h2 {
+    font-size: 3.2rem;
+  }
 }
 
 h3 {
@@ -399,6 +404,10 @@ a {
   text-decoration: none;
 }
 
+[class$=__heading] {
+  margin: 2rem 0;
+}
+
 .contenido-home {
   background: #000;
   margin-bottom: 25rem;
@@ -406,26 +415,33 @@ a {
   height: 66rem;
   padding-top: 4rem;
 }
+@media (min-width: 360px) and (min-height: 700px) {
+  .contenido-home {
+    margin-bottom: 21rem;
+  }
+}
+@media (min-width: 355px) and (min-height: 730px) {
+  .contenido-home {
+    margin-bottom: 23rem;
+  }
+}
 @media (min-width: 700px) and (min-height: 600px) {
   .contenido-home {
     height: 122rem;
-    margin-bottom: 45rem;
+    margin-bottom: 43rem;
   }
 }
 @media (min-width: 1000px) and (min-height: 590px) {
   .contenido-home {
     height: 70rem !important;
+    margin-bottom: 24rem;
     padding-top: 1px;
   }
 }
 @media (min-width: 1300px) and (min-height: 815px) {
   .contenido-home {
     height: 130rem !important;
-  }
-}
-@media (min-width: 1300px) and (min-height: 815px) {
-  .contenido-home {
-    margin-bottom: 50rem;
+    margin-bottom: 47rem;
   }
 }
 .contenido-home__busqueda {
@@ -734,7 +750,7 @@ a {
     height: 44rem;
   }
 }
-@media (min-width: 385px) and (min-height: 800px) {
+@media (min-width: 355px) and (min-height: 730px) {
   .busqueda {
     height: 50rem;
   }
@@ -799,5 +815,38 @@ a {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.destinos__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 700px) and (min-height: 600px) {
+  .destinos__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1000px) and (min-height: 590px) {
+  .destinos__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.destino {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+}
+.destino__imagen {
+  width: 14rem;
+}
+.destino__nombre, .destino__distancia {
+  margin: 0;
 }
 /*# sourceMappingURL=app.css.map */

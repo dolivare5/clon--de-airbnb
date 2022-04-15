@@ -8,28 +8,27 @@
     height: 66rem;
     padding-top: 4rem ;
 
+    @include m.telefono-gama-media{
+        margin-bottom: 21rem;
+    }
+
+    @include m.telefono-gama-alta{
+        margin-bottom: 23rem;
+    }
+
     @include m.tablet{
         height: 122rem;
-        margin-bottom: 45rem;
+        margin-bottom: 43rem;
     }
-
-    @include m.tablet-gr{
-    }
-
-    @include m.tablet-egr{
-    }
-
     @include m.compu-peq{
         height: 70rem !important;
+        margin-bottom: 24rem;
         padding-top: 1px;
     }
 
     @include m.desktop{
         height: 130rem !important;
-    }
-
-    @include m.desktop{
-        margin-bottom: 50rem;
+        margin-bottom: 47rem;
     }
 
     &__busqueda{

@@ -14,7 +14,7 @@
 }
 
 @mixin telefono-gama-alta {
-    @media (min-width: 385px) and (min-height: 800px) {
+    @media (min-width: 355px) and (min-height: 730px) {
         @content;
     }
 }
