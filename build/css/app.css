@@ -359,7 +359,7 @@ p {
 }
 
 .contenedor {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -958,5 +958,51 @@ a {
 }
 .lugar-recomendado:nth-child(4) {
   background-color: #cc2d4a;
+}
+
+@media (min-width: 700px) and (min-height: 600px) {
+  .experiencias__contenedor {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.experiencia {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 0 34rem 3rem;
+  border-radius: 1.5rem;
+  margin-bottom: 3rem;
+}
+.experiencia:nth-child(1) {
+  background-image: url("..//img/experiencia_viaje.webp");
+}
+.experiencia:nth-child(2) {
+  background-image: url("..//img/experiencia_casa.webp");
+}
+@media (min-width: 700px) and (min-height: 600px) {
+  .experiencia {
+    padding-bottom: 31rem;
+    width: 50%;
+  }
+}
+@media (min-width: 1300px) and (min-height: 815px) {
+  .experiencia {
+    padding: 6rem 0 101rem 6rem;
+  }
+}
+.experiencia__texto {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  width: 55%;
+  font-weight: bold;
+}
+.experiencia__enlace {
+  color: #000;
+  font-size: 1.7rem;
+  padding: 1.5rem 2.5rem;
+  background-color: #FFFFFF;
+  border-radius: 0.8rem;
 }
 /*# sourceMappingURL=app.css.map */
