@@ -20,13 +20,31 @@
 }
 
 @mixin tablet {
-    @media (min-width: v.$tablet) {
+    @media (min-width: v.$tablet) and (min-height: v.$tablet-alt-pq) {
         @content;
     }
 }
-  
+
+@mixin tablet-gr {
+    @media (min-width: v.$tablet) and (min-height: v.$tablet-alt-gr) {
+        @content;
+    }
+}
+
+@mixin tablet-egr {
+    @media (min-width: v.$tablet) and (min-height: v.$tablet-alt-egr) {
+        @content;
+    }
+}
+
+@mixin compu-peq {
+    @media (min-width: v.$compu-peque-ancho) and (min-height: v.$compu-peque-alto) {
+        @content;
+    }
+}
+
 @mixin desktop {
-    @media (min-width: v.$desktop) {
+    @media (min-width: v.$desktop) and (min-height: v.$desktop-alt) {
         @content;
     }
 }

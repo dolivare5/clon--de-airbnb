@@ -2,29 +2,172 @@
 @use "../../base/mixins" as m;
 
 .header{
-    background: #000;
-    height: 100vh;
-    text-align: center;
-
-    @include m.telefono-gama-media{
-        height: 86vh;
-    }
-
+    width: 100%;
+    margin: 0 auto;
+    background-color: v.$negro;
+    padding: 1.7rem 0 .5rem 0;
     @include m.tablet{
-        height: 130vh;
+        width: unset;
+        padding: 0 0 3rem 0;
     }
-    &__busqueda{
-        margin-top: 5rem;
-    }
-
-    .header__busqueda-boton{
-        @include m.boton(v.$blanco, v.$primario);
-    }
-
-    &__contenido{
+    &__contenedor{
         width: 85%;
         margin: 0 auto;
+        @include m.tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+        }
+    }
+
+    &--fijar{
         display: flex;
-        flex-direction: column;
+        background-color: v.$blanco;
+        height: fit-content;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        transition: 0.3s ease all;
+        width: 100%;
+        padding: 1rem;
+        @include m.tablet{
+            padding: unset;
+        }
+    }
+
+    &__navegacion {
+        display: none;
+        @include m.tablet{
+            display: flex;
+            gap: 4rem;
+        }
+    }
+
+    &__link{
+        color: v.$blanco;
+        margin: 0;
+        @include m.tablet{
+            font-size: 1.1rem;
+        }
+
+        @include m.desktop{
+            font-size: 1.6rem;
+        }
+    }
+
+    &__logo{
+        display: none;
+        @include m.tablet{
+            display: flex;
+            height: 5rem;
+            width: 20rem;
+            background-image: url("../img/airbnb_logo.svg");
+            background-repeat: no-repeat;
+            background-position: left center;
+            &:hover{
+                background-image: url("../img/airbnb_logo_blanco.svg");
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__login{
+        display: none;
+        @include m.tablet{
+            display: flex;
+        }
+    }
+
+    &--modificar{
+        width: 85%;
+        margin: 0 auto;
+        overflow: visible;
+        .header__navegacion{
+            display: none;
+        }
+        .header__busqueda{
+            display: flex;
+        }
+
+
+        @include m.tablet{
+            .header__link{
+                color: v.$negro;
+                margin: 0;
+            }
+
+            .header__logo{
+                &:hover{
+                    background-image: url("../img/airbnb_logo_oscuro.svg");
+                }
+            }
+        }
+    }
+
+    &__busqueda{
+        display: flex;
+        margin: 0;
+        &--activar{
+            display: flex;
+        }
+        @include m.tablet{
+            display: none;
+            margin: 1rem 0;
+        }
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15rem;
+        background-color: #f7f7f7;
+        padding: 1.1rem;
+        @include m.tablet{
+            justify-content: unset;
+            margin-top: 0;
+            flex-direction: unset;
+            padding: 0;
+            box-shadow: 0 6px 20px rgb(0 0 0 /40%);
+        }
+
+
+    }
+
+
+    &__campo-busqueda{
+        border: none;
+        outline: none;
+        width: 14rem;
+        background-color: transparent;
+        color: black;
+        @include m.tablet{
+            margin: 1.4rem;
+            width: auto;
+        }
+    }
+
+    &__icono-busqueda{
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        margin-right: .3rem;
+        svg{
+            position: relative;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translate(-50%, -50%);
+            stroke: #FF385C !important;
+        }
+        @include m.tablet{
+            margin-right: .7rem;
+            padding: 1.6rem;
+            background-color: #FF385C;
+            svg{
+                stroke: v.$blanco !important;
+            }
+        }
     }
 }

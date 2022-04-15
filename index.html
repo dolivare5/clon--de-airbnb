@@ -12,37 +12,36 @@
     </head>
     <body>
         <header class="header">
-            <div class="barra">
+            <div class="header__contenedor">
+                <div class="header__logo">
+                    <a href="#"></a>
+                </div> <!-- .header__logo -->
 
-               <div class="barra__contenedor">
-                   <div class="barra__logo">
-                       <a href="#"></a>
-                   </div> <!-- .barra__logo -->
+                <div class="header__busqueda">
+                    <input class="header__campo-busqueda" type="text" placeholder="Empieza la busqueda">
+                    <div class="header__icono-busqueda">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="16"
+                             height="16" viewBox="0 0 24 24" stroke-width="3" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <circle cx="10" cy="10" r="7" />
+                            <line x1="21" y1="21" x2="15" y2="15" />
+                        </svg>
+                    </div> <!-- .header__icono-busqueda -->
+                </div> <!-- .header_busqueda -->
 
-                   <div class="barra__busqueda">
-                       <input class="barra__campo-busqueda" type="text" placeholder="Empieza la busqueda">
-                       <div class="barra__icono-busqueda">
-                           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="16"
-                                height="16" viewBox="0 0 24 24" stroke-width="3" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                               <circle cx="10" cy="10" r="7" />
-                               <line x1="21" y1="21" x2="15" y2="15" />
-                           </svg>
-                       </div> <!-- .barra__icono-busqueda -->
-                   </div> <!-- .barra_busqueda -->
+                <nav class="header__navegacion">
+                    <a class="header__link" href="#">Lugares para hospedarte</a>
+                    <a class="header__link" href="#">Experiencias</a>
+                    <a class="header__link" href="#">Experiencias en linea</a>
+                </nav> <!-- .header__navegacion -->
 
-                   <nav class="barra__navegacion">
-                       <a class="barra__link" href="#">Lugares para hospedarte</a>
-                       <a class="barra__link" href="#">Experiencias</a>
-                       <a class="barra__link" href="#">Experiencias en linea</a>
-                   </nav> <!-- .barra__navegacion -->
+                <nav class="header__login">
+                    <a class="header__link" href="#">Hazte Anfitrión</a>
+                </nav> <!-- .header__login -->
+            </div>
+        </header>
 
-                   <nav class="barra__login">
-                       <a class="barra__link" href="#">Hazte Anfitrión</a>
-                   </nav> <!-- .barra__login -->
-               </div>
-
-            </div> <!-- .barra .contenedor -->
+        <section class="contenido-home">
 
             <form action="" class="formulario contenedor">
                 <div class="formulario__campo">
@@ -70,7 +69,7 @@
                 </div> <!-- .formulario__campo -->
             </form> <!-- .formulario -->
 
-            <div class="header__contenido">
+            <div class="header__contenido contenedor">
                 <div class="informacion">
                     <p class="informacion__texto">Ayuda a albergar a 100 000 refugiados que huyen de Ucrania</p>
                     <a href="#" class="informacion__enlace">Más información</a>
@@ -84,10 +83,20 @@
                 </div> <!-- .busqueda -->
             </div>
 
-        </header> <!-- .header -->
+        </section> <!-- .header -->
 
-
-
-        <script src="build/js/index.js"></script>
+        <section class="contenedor destinos">
+            <h2 class="destinos__heading">Inspiración para tu proximo viaje</h2>
+            <ul class="destinos__grid">
+                <li class="destino">
+                    <img src="build/img/melgar.webp" alt="">
+                    <div class="destino__descripcion">
+                        <h3 class="destino__heading">Melgar</h3>
+                        <p class="texto-km">76 Kilómetros de distancia</p>
+                    </div> <!-- .destino__descripcion -->
+                </li> <!-- .destino -->
+            </ul> <!-- .destinos__grid -->
+            <script src="build/js/index.js"></script>
+        </section> <!-- .contenedor .destinos -->
     </body>
 </html>

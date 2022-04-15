@@ -4,7 +4,6 @@
 .formulario{
     display: none;
     background-color: v.$blanco;
-    margin: 5.4rem auto 2rem  auto;
     border-radius: 5rem;
     box-shadow: 0 3px 7px 0 v.$gris;
     padding: 3rem 0;
@@ -16,7 +15,7 @@
     }
 
     &__campo{
-        padding: 1rem 2rem;
+        padding: 2rem 2rem;
         display: flex;
         flex-direction: column;
 

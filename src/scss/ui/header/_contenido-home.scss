@@ -1,0 +1,45 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.contenido-home{
+    background: #000;
+    margin-bottom: 25rem;
+    text-align: center;
+    height: 66rem;
+    padding-top: 4rem ;
+
+    @include m.tablet{
+        height: 122rem;
+        margin-bottom: 45rem;
+    }
+
+    @include m.tablet-gr{
+    }
+
+    @include m.tablet-egr{
+    }
+
+    @include m.compu-peq{
+        height: 70rem !important;
+        padding-top: 1px;
+    }
+
+    @include m.desktop{
+        height: 130rem !important;
+    }
+
+    @include m.desktop{
+        margin-bottom: 50rem;
+    }
+
+    &__busqueda{
+        margin-top: 5rem;
+    }
+
+    &__contenido{
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
