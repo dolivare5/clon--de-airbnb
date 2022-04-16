@@ -1,14 +1,14 @@
 @use "../../base/variables" as v;
 @use "../../base/mixins" as m;
 .preguntas{
-    height: 58rem;
+    height: 54rem;
     margin-bottom: 2rem;
     @include m.tablet-egr{
-        height: 42rem;
+        height: 41rem;
     }
 
     @include m.desktop{
-        height: 83rem;
+        height: 84rem;
     }
 
 

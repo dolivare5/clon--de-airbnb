@@ -1,0 +1,55 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+
+.footer{
+    background-color: #f7f7f7;
+    &__contenido{
+
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        @include m.desktop{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__elementos {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.9rem;
+
+        border-top: 1px solid #dddddd;
+
+        &:nth-child(1) {
+            border: none;
+        }
+        @include m.desktop{
+            border: none;
+        }
+    }
+    &__enlaces{
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+        @include m.tablet{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include m.desktop{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__heading{
+        margin: 1.5rem 0 0 0;
+        font-size: 1.6rem;
+    }
+
+    &__enlace{
+        font-size: 1.4rem;
+        color: v.$negro ;
+    }
+}
