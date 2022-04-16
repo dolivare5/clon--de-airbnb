@@ -1054,8 +1054,8 @@ a {
 
 .experiencia {
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: bottom;
     padding: 3rem 0 34rem 3rem;
     border-radius: 1.5rem;
     margin-bottom: 3rem;
@@ -1078,7 +1078,7 @@ a {
 
 @media (min-width: 1290px) and (min-height: 815px) {
     .experiencia {
-        padding: 6rem 0 101rem 6rem;
+        padding: 6rem 0 60rem 6rem;
     }
 }
 
