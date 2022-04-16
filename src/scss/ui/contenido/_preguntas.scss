@@ -1,0 +1,80 @@
+@use "../../base/variables" as v;
+@use "../../base/mixins" as m;
+.preguntas{
+    height: 58rem;
+    margin-bottom: 2rem;
+    @include m.tablet-egr{
+        height: 42rem;
+    }
+
+    @include m.desktop{
+        height: 83rem;
+    }
+
+
+    &__contenedor{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-repeat: no-repeat;
+        background-size: cover;;
+        background-image: url("../img/anfitrion2-1x-5.webp");
+        height: 54rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 3rem 0 3rem 3rem;
+
+        @include m.tablet{
+            height: 41rem;
+            background-image: url("../img/anfitrion2-1x-3.webp");
+        }
+        @include m.tablet-egr{
+            height: 40rem;
+        }
+
+        @include m.compu-peq{
+            height: 52rem;
+            padding: 5rem 0 4rem 8rem;
+        }
+
+        @include m.compu-med{
+            height: 64rem;
+            padding: 8rem 0 8rem 8rem;
+        }
+
+        @include m.desktop{
+            height: 80rem;
+            background-image: url("../img/anfitrion2-1x.jpg");
+            width: 85%;
+            border-radius: 1.5rem;
+        }
+    }
+
+    &__texto{
+        color: v.$blanco;
+        font-size: 4.9rem;
+        font-weight: 700;
+        margin: 0;
+
+        @include m.compu-peq{
+            font-size: 6rem;
+            width: 60%;
+        }
+
+        @include m.compu-med{
+            font-size: 7rem;
+        }
+
+    }
+
+    &__enlace{
+        color: v.$negro;
+        font-size: 1.6rem;
+        padding: 2rem 3rem;
+        background-color: v.$blanco;
+        max-width: fit-content;
+        border-radius: 1rem;
+    }
+
+}

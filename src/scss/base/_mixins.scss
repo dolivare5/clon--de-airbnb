@@ -31,6 +31,12 @@
     }
 }
 
+@mixin tablet-extg{
+    @media (min-width: 900px) and (min-height: 512px){
+        @content;
+    }
+}
+
 @mixin tablet-egr {
     @media (min-width: v.$tablet) and (min-height: v.$tablet-alt-egr) {
         @content;
@@ -39,6 +45,12 @@
 
 @mixin compu-peq {
     @media (min-width: v.$compu-peque-ancho) and (min-height: v.$compu-peque-alto) {
+        @content;
+    }
+}
+
+@mixin compu-med {
+    @media (min-width: v.$compu-med-ancho) and (min-height: v.$compu-med-alto) {
         @content;
     }
 }
